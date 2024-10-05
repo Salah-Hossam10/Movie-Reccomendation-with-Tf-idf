@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/movies-02-900x600.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Makes the background cover the whole page */
+            color: #fff; /* Text color */
+            text-align: center; /* Centers the text */
+        }
+        .container {
+            max-width: 800px; /* Set a max width for the recommendations */
+            margin: 0 auto; /* Centers the container */
+            padding: 20px; /* Adds padding inside the container */
+            background: rgba(7, 1, 1, 0.65); /* Semi-transparent background */
+            border-radius: 10px; /* Rounds the corners */
+        }
+        h1 {
+            margin-bottom: 100px; /* Space below the heading */
+        }
+        ul {
+            list-style-type: none; /* Removes bullets */
+            padding: 0; /* Removes default padding */
+        }
+        li {
+            background: rgba(255, 255, 255, 0.1); /* Light background for items */
+            margin: 10px 0; /* Margin above and below each item */
+            padding: 15px; /* Padding inside each item */
+            border-radius: 5px; /* Rounds the corners of items */
+        }
+        a {
+            display: inline-block; /* Allows for padding */
+            margin-top: 100px; /* Space above the link */
+            text-decoration: none; /* Removes underline */
+            color: #ffcc00; /* Link color */
+            font-weight: bold; /* Makes the link bold */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recommendations</h1>
+        <ul>
+            {% for recommendation in recommendations %}
+                <li>{{ recommendation }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
+
